@@ -1,0 +1,356 @@
+.signatureSection {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 202, 220, 0.53) -16.38%,
+    rgba(251, 169, 220, 0.53) -6.8%,
+    rgba(246, 122, 220, 0.53) 7.58%,
+    rgba(244, 105, 220, 0.53) 14.76%,
+    rgba(244, 106, 111, 0.53) 31.53%,
+    rgba(245, 109, 0, 0.53) 50.7%,
+    rgba(0, 241, 255, 0.53) 103.4%
+  );
+  position: relative;
+  z-index: 1;
+}
+
+.signatureSection .container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+/* .signatureSection [class*="col-"] {
+  padding: 0.5rem;
+} */
+
+.signatureTitle {
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 71.02px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+  text-align: center;
+  margin: 0 0 3rem 0;
+}
+
+.signatureLine {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 86px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.logosRow {
+  margin: 2rem 0;
+}
+
+.logosContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.logoImage {
+  width: 100%;
+  max-width: 353px;
+  height: auto;
+  object-fit: contain;
+}
+
+.orText {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin-bottom: 100px;
+}
+
+.cardsRow {
+  margin-top: 2rem;
+}
+
+.signatureCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card 1 - Home Gradient */
+.homeCard {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 177, 128, 0.31) 4%,
+    rgba(18, 182, 167, 0.31) 30%,
+    rgba(36, 188, 207, 0.31) 61%,
+    rgba(47, 192, 231, 0.31) 85%,
+    rgba(52, 194, 241, 0.31) 100%
+  );
+}
+
+/* Card 2 - Yummy Tummy Gradient */
+.yummyCard {
+  background: linear-gradient(
+    90deg,
+    rgba(244, 105, 220, 0.22) 0%,
+    rgba(245, 109, 0, 0.22) 100%
+  );
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yummyCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.cardImage {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: linear-gradient(
+    90deg,
+    #00b180 -990.39%,
+    #12b6a7 -703.09%,
+    #24bccf -360.53%,
+    #2fc0e7 -95.33%,
+    #34c2f1 70.42%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cardTitleYummy {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: linear-gradient(
+    90deg,
+    #f69138 -1081.47%,
+    #f08e49 -951.08%,
+    #e28777 -702.15%,
+    #d07eb3 -417.66%,
+    #d177a8 -382.1%,
+    #dc5370 -216.15%,
+    #e33948 -73.9%,
+    #e82930 32.78%,
+    #ea2427 103.9%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .signatureTitle {
+    font-size: 56px;
+  }
+
+  .signatureLine {
+    font-size: 68px;
+  }
+
+  .signatureCard {
+    min-height: 350px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cardImageWrapper {
+    height: 250px;
+  }
+
+  .cardImage {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signatureSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .signatureTitle {
+    font-size: 42px;
+    margin-bottom: 2rem;
+  }
+
+  .signatureLine {
+    font-size: 52px;
+  }
+
+  .orText {
+    font-size: 64px;
+    margin-bottom: 0px;
+  }
+
+  .logoImage {
+    max-width: 280px;
+  }
+
+  .logosContainer {
+    gap: 1.5rem;
+  }
+
+  .signatureCard {
+    min-height: 300px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardImageWrapper {
+    height: 200px;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardImage {
+    max-width: 180px;
+  }
+
+  .cardTitle,
+  .cardTitleYummy {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .signatureSection {
+    padding: 2rem 1rem;
+  }
+
+  .signatureTitle {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+  }
+
+  .signatureLine {
+    font-size: 40px;
+  }
+
+  .orText {
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+
+  .logoImage {
+    max-width: 220px;
+  }
+
+  .logosContainer {
+    gap: 1rem;
+  }
+
+  .signatureCard {
+    min-height: 280px;
+    padding: 1.5rem 1rem;
+  }
+
+  .cardImageWrapper {
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .cardImage {
+    max-width: 150px;
+  }
+
+  .cardTitle,
+  .cardTitleYummy {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .signatureTitle {
+    font-size: 28px;
+  }
+
+  .signatureLine {
+    font-size: 34px;
+  }
+
+  .orText {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+
+  .logoImage {
+    max-width: 180px;
+  }
+
+  .logosContainer {
+    gap: 0.75rem;
+  }
+
+  .cardImage {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .signatureTitle {
+    font-size: 24px;
+  }
+
+  .signatureLine {
+    font-size: 30px;
+  }
+
+  .cardImage {
+    max-width: 100px;
+  }
+}

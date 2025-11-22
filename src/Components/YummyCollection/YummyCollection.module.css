@@ -1,0 +1,626 @@
+.yummyCollectionSection {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #f9cea06b;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  margin: 0;
+}
+
+.collectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.collectionImage {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.collectionText {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.collectionDescription {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #000;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+/* Rectangle Image Container */
+.rectangleContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  display: block;
+}
+
+/* Rectangle Image - Full Width */
+.rectangleImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-bottom: 4px solid #a6a8ab;
+}
+
+/* Leaves positioned on the rectangle image */
+.leaf1,
+.leaf2,
+.leaf3,
+.leaf4,
+.leaf5,
+.leaf6,
+.leaf7,
+.leaf8,
+.leaf9,
+.leaf10,
+.leaf11,
+.leaf12,
+.leaf13,
+.leaf14,
+.leaf15 {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 8%;
+  max-height: 12%;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Leaf 1 - Moved down */
+.leaf1 {
+  top: 20%;
+  left: 5%;
+  max-width: 6%;
+  transform: rotate(-15deg);
+}
+
+/* Leaf 2 - Moved down */
+.leaf2 {
+  top: 25%;
+  left: 22%;
+  max-width: 7%;
+  transform: rotate(25deg);
+}
+
+/* Leaf 3 - Moved down */
+.leaf3 {
+  top: 22%;
+  left: 42%;
+  max-width: 8%;
+  transform: rotate(-30deg);
+}
+
+/* Leaf 4 - Moved down */
+.leaf4 {
+  top: 24%;
+  right: 12%;
+  max-width: 6%;
+  transform: rotate(20deg);
+}
+
+/* Leaf 5 - Middle Left */
+.leaf5 {
+  top: 45%;
+  left: 8%;
+  max-width: 7%;
+  transform: rotate(15deg);
+}
+
+/* Leaf 6 - Middle Center */
+.leaf6 {
+  top: 50%;
+  left: 48%;
+  max-width: 8%;
+  transform: rotate(-25deg);
+}
+
+/* Leaf 7 - Middle Right */
+.leaf7 {
+  top: 48%;
+  right: 15%;
+  max-width: 6%;
+  transform: rotate(30deg);
+}
+
+/* Leaf 8 - Bottom Left */
+.leaf8 {
+  bottom: 15%;
+  left: 18%;
+  max-width: 7%;
+  transform: rotate(-20deg);
+}
+
+/* Leaf 9 - Bottom Right */
+.leaf9 {
+  bottom: 18%;
+  right: 10%;
+  max-width: 6%;
+  transform: rotate(18deg);
+}
+
+/* Leaf 10 - Left side */
+.leaf10 {
+  top: 30%;
+  left: 2%;
+  max-width: 6%;
+  transform: rotate(-10deg);
+}
+
+/* Leaf 11 - Right side */
+.leaf11 {
+  top: 32%;
+  right: 2%;
+  max-width: 6%;
+  transform: rotate(12deg);
+}
+
+/* Leaf 12 - Left side middle */
+.leaf12 {
+  top: 55%;
+  left: 3%;
+  max-width: 7%;
+  transform: rotate(20deg);
+}
+
+/* Leaf 13 - Right side middle */
+.leaf13 {
+  top: 52%;
+  right: 3%;
+  max-width: 7%;
+  transform: rotate(-18deg);
+}
+
+/* Leaf 14 - Bottom left side */
+.leaf14 {
+  bottom: 12%;
+  left: 5%;
+  max-width: 6%;
+  transform: rotate(15deg);
+}
+
+/* Leaf 15 - Bottom right side */
+.leaf15 {
+  bottom: 10%;
+  right: 5%;
+  max-width: 6%;
+  transform: rotate(-22deg);
+}
+
+/* Positioned Images */
+.positionedImage {
+  position: absolute;
+  top: 50%;
+  right: -12%;
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.rotatingCircle {
+  position: absolute;
+  bottom: 30%;
+  left: -10%;
+  width: 220px;
+  height: 220px;
+  z-index: 2;
+  animation: rotate 20s linear infinite;
+  transform: translate(50%, 50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .leaf1,
+  .leaf2,
+  .leaf3,
+  .leaf4,
+  .leaf5,
+  .leaf6,
+  .leaf7,
+  .leaf8,
+  .leaf9,
+  .leaf10,
+  .leaf11,
+  .leaf12,
+  .leaf13,
+  .leaf14,
+  .leaf15 {
+    max-width: 14%;
+    max-height: 14%;
+  }
+
+  .positionedImage {
+    width: 220px;
+    top: 65%;
+    right: -15%;
+  }
+
+  .rotatingCircle {
+    width: 150px;
+    height: 150px;
+    bottom: 30%;
+    left: -15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .yummyCollectionSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .collectionImage {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .collectionDescription {
+    font-size: 14px;
+  }
+
+  .leaf1,
+  .leaf2,
+  .leaf3,
+  .leaf4,
+  .leaf5,
+  .leaf6,
+  .leaf7,
+  .leaf8,
+  .leaf9,
+  .leaf10,
+  .leaf11,
+  .leaf12,
+  .leaf13,
+  .leaf14,
+  .leaf15 {
+    max-width: 16%;
+    max-height: 12%;
+  }
+
+  .leaf1 {
+    top: 3%;
+    left: 5%;
+  }
+
+  .leaf2 {
+    top: 8%;
+    left: 20%;
+  }
+
+  .leaf3 {
+    top: 5%;
+    left: 40%;
+  }
+
+  .leaf4 {
+    top: 7%;
+    right: 10%;
+  }
+
+  .leaf5 {
+    top: 30%;
+    left: 8%;
+  }
+
+  .leaf6 {
+    top: 35%;
+    left: 45%;
+  }
+
+  .leaf7 {
+    top: 33%;
+    right: 12%;
+  }
+
+  .leaf8 {
+    bottom: 15%;
+    left: 15%;
+  }
+
+  .leaf9 {
+    bottom: 20%;
+    right: 8%;
+  }
+
+  .positionedImage {
+    width: 180px;
+    top: 60%;
+    right: -18%;
+  }
+
+  .rotatingCircle {
+    width: 120px;
+    height: 120px;
+    bottom: 30%;
+    left: -15%;
+  }
+}
+
+@media (max-width: 576px) {
+  .yummyCollectionSection {
+    padding: 2rem 1rem;
+  }
+
+  .collectionImage {
+    margin-bottom: 1rem;
+  }
+
+  .collectionDescription {
+    font-size: 12px;
+  }
+
+  .leaf1,
+  .leaf2,
+  .leaf3,
+  .leaf4,
+  .leaf5,
+  .leaf6,
+  .leaf7,
+  .leaf8,
+  .leaf9,
+  .leaf10,
+  .leaf11,
+  .leaf12,
+  .leaf13,
+  .leaf14,
+  .leaf15 {
+    max-width: 20%;
+    max-height: 10%;
+  }
+
+  .leaf1 {
+    top: 2%;
+    left: 3%;
+  }
+
+  .leaf2 {
+    top: 6%;
+    left: 18%;
+  }
+
+  .leaf3 {
+    top: 4%;
+    left: 38%;
+  }
+
+  .leaf4 {
+    top: 5%;
+    right: 8%;
+  }
+
+  .leaf5 {
+    top: 28%;
+    left: 5%;
+  }
+
+  .leaf6 {
+    top: 32%;
+    left: 42%;
+  }
+
+  .leaf7 {
+    top: 30%;
+    right: 10%;
+  }
+
+  .leaf8 {
+    bottom: 12%;
+    left: 12%;
+  }
+
+  .leaf9 {
+    bottom: 18%;
+    right: 5%;
+  }
+
+  .positionedImage {
+    width: 180px;
+    top: 65%;
+    right: -25%;
+  }
+
+  .rotatingCircle {
+    width: 100px;
+    height: 100px;
+    bottom: 30%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 425px) {
+  .collectionDescription {
+    font-size: 11px;
+  }
+
+  .leaf1,
+  .leaf2,
+  .leaf3,
+  .leaf4,
+  .leaf5,
+  .leaf6,
+  .leaf7,
+  .leaf8,
+  .leaf9,
+  .leaf10,
+  .leaf11,
+  .leaf12,
+  .leaf13,
+  .leaf14,
+  .leaf15 {
+    max-width: 22%;
+    max-height: 8%;
+  }
+
+  .leaf1 {
+    top: 1%;
+    left: 2%;
+  }
+
+  .leaf2 {
+    top: 5%;
+    left: 15%;
+  }
+
+  .leaf3 {
+    top: 3%;
+    left: 35%;
+  }
+
+  .leaf4 {
+    top: 4%;
+    right: 6%;
+  }
+
+  .leaf5 {
+    top: 25%;
+    left: 3%;
+  }
+
+  .leaf6 {
+    top: 30%;
+    left: 40%;
+  }
+
+  .leaf7 {
+    top: 28%;
+    right: 8%;
+  }
+
+  .leaf8 {
+    bottom: 10%;
+    left: 10%;
+  }
+
+  .leaf9 {
+    bottom: 15%;
+    right: 3%;
+  }
+
+  .positionedImage {
+    width: 120px;
+    top: 65%;
+    right: -25%;
+  }
+
+  .rotatingCircle {
+    width: 80px;
+    height: 80px;
+    bottom: 30%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 320px) {
+  .collectionDescription {
+    font-size: 10px;
+  }
+
+  .leaf1,
+  .leaf2,
+  .leaf3,
+  .leaf4,
+  .leaf5,
+  .leaf6,
+  .leaf7,
+  .leaf8,
+  .leaf9,
+  .leaf10,
+  .leaf11,
+  .leaf12,
+  .leaf13,
+  .leaf14,
+  .leaf15 {
+    max-width: 24%;
+    max-height: 7%;
+  }
+
+  .leaf1 {
+    top: 1%;
+    left: 1%;
+  }
+
+  .leaf2 {
+    top: 4%;
+    left: 12%;
+  }
+
+  .leaf3 {
+    top: 2%;
+    left: 32%;
+  }
+
+  .leaf4 {
+    top: 3%;
+    right: 4%;
+  }
+
+  .leaf5 {
+    top: 22%;
+    left: 2%;
+  }
+
+  .leaf6 {
+    top: 28%;
+    left: 38%;
+  }
+
+  .leaf7 {
+    top: 26%;
+    right: 6%;
+  }
+
+  .leaf8 {
+    bottom: 8%;
+    left: 8%;
+  }
+
+  .leaf9 {
+    bottom: 12%;
+    right: 2%;
+  }
+
+  .positionedImage {
+    width: 100px;
+    top: 70%;
+    right: -30%;
+  }
+
+  .rotatingCircle {
+    width: 70px;
+    height: 70px;
+    bottom: 22%;
+    left: -25%;
+  }
+}

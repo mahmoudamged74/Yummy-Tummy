@@ -1,0 +1,179 @@
+.talkAboutSection {
+  width: 100%;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 177, 128, 0.31) 4%,
+    rgba(18, 182, 167, 0.31) 30%,
+    rgba(36, 188, 207, 0.31) 61%,
+    rgba(47, 192, 231, 0.31) 85%,
+    rgba(52, 194, 241, 0.31) 100%
+  );
+  position: relative;
+  overflow: visible;
+  z-index: 10;
+}
+
+.rotatingCircle {
+  position: absolute;
+  top: -40%;
+  left: -3%;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  z-index: 100;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.talkAboutSection .container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.talkAboutSection [class*="col-"] {
+  padding: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  width: 168px;
+  height: 170px;
+  object-fit: contain;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.talkText {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .talkText {
+    font-size: 48px;
+  }
+
+  .logoImage {
+    width: 140px;
+    height: 142px;
+  }
+
+  .rotatingCircle {
+    width: 200px;
+    height: 200px;
+    top: -40%;
+    left: -3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .talkAboutSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .talkText {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .logoImage {
+    width: 120px;
+    height: 122px;
+  }
+
+  .rotatingCircle {
+    width: 180px;
+    height: 180px;
+    top: -20%;
+    left: -3%;
+  }
+}
+
+@media (max-width: 576px) {
+  .talkAboutSection {
+    padding: 2rem 1rem;
+  }
+
+  .talkText {
+    font-size: 28px;
+  }
+
+  .logoImage {
+    width: 100px;
+    height: 102px;
+  }
+
+  .rotatingCircle {
+    width: 150px;
+    height: 150px;
+    top: -30%;
+    left: -3%;
+  }
+}
+
+@media (max-width: 425px) {
+  .talkText {
+    font-size: 24px;
+  }
+
+  .rotatingCircle {
+    width: 120px;
+    height: 120px;
+    top: -10%;
+    left: -3%;
+  }
+}
+
+@media (max-width: 320px) {
+  .talkText {
+    font-size: 20px;
+  }
+
+  .rotatingCircle {
+    width: 100px;
+    height: 100px;
+    top: -10%;
+    left: -3%;
+  }
+}

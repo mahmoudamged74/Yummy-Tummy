@@ -1,0 +1,8 @@
+.yummyPage {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.yummyPage :global(nav[class*="navbar"]) {
+  background-color: #f9cea06b !important;
+}

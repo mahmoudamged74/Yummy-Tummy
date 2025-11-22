@@ -1,0 +1,171 @@
+.footerSection {
+  padding: 3rem 0;
+  background-color: #f9cea06b;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.footerRow {
+  margin: 0;
+  align-items: center;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.rotatingImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.contentContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerTitle {
+  font-family: "Figtree", sans-serif;
+  font-weight: 800;
+  font-size: 29.05px;
+  color: #f69138;
+  margin-bottom: 0.5rem;
+}
+
+.footerText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footerLink {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: #f69138;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socialIcon {
+  color: #000;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcon:hover {
+  color: #f69138;
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .contentContainer {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .footerTitle {
+    font-size: 24px;
+  }
+
+  .rotatingImage {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    padding: 1rem;
+  }
+
+  .contentContainer {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .footerTitle {
+    font-size: 20px;
+  }
+
+  .footerText {
+    font-size: 11px;
+  }
+
+  .rotatingImage {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerSection {
+    padding: 2rem 0;
+  }
+
+  .imageContainer {
+    padding: 0.5rem;
+  }
+
+  .contentContainer {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .footerTitle {
+    font-size: 18px;
+  }
+
+  .footerText {
+    font-size: 10px;
+  }
+
+  .rotatingImage {
+    max-width: 200px;
+  }
+
+  .socialIcon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footerTitle {
+    font-size: 16px;
+  }
+
+  .footerText {
+    font-size: 9px;
+  }
+
+  .rotatingImage {
+    max-width: 180px;
+  }
+}

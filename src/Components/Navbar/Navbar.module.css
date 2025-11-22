@@ -1,0 +1,283 @@
+.navbar {
+  background-color: #ffcadc;
+  padding: 1rem 0;
+  border-bottom: 2px solid #b9b9ba;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #333;
+  text-decoration: none;
+  font-size: 20.24px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Figtree", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #000;
+}
+
+.navLinkContact {
+  color: #333;
+  text-decoration: none;
+  font-size: 20.24px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Figtree", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.navLinkContact:hover {
+  color: #000;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownIcon {
+  font-size: 0.7rem;
+  color: #333;
+  margin-left: 0.2rem;
+}
+
+.menuIcon {
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menuIcon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke-width: 3;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background-color: #ffcadc;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarOpen {
+  right: 0;
+}
+
+.sidebarContent {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #b9b9ba;
+}
+
+.sidebarLogo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebarLink {
+  color: #333;
+  text-decoration: none;
+  font-size: 20.24px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Figtree", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s;
+}
+
+.sidebarLink:hover {
+  color: #000;
+}
+
+.sidebarLinkContact {
+  color: #333;
+  text-decoration: none;
+  font-size: 20.24px;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Figtree", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.sidebarLinkContact:hover {
+  color: #000;
+}
+
+.sidebarDropdown {
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .logoImage {
+    height: 28px;
+    width: auto;
+  }
+
+  .menuIcon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 0.6rem 0;
+  }
+
+  .container {
+    padding: 0 0.6rem;
+  }
+
+  .logoImage {
+    height: 24px;
+    width: auto;
+  }
+
+  .menuIcon svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .sidebar {
+    width: 280px;
+  }
+
+  .sidebarContent {
+    padding: 1.5rem;
+  }
+
+  .sidebarLogo {
+    height: 28px;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+}

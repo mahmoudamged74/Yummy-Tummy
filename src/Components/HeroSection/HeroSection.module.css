@@ -1,0 +1,529 @@
+.heroSection {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #ffcadc;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+.heroBox {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.heroBoxWithCircle {
+  overflow: visible;
+}
+
+.heroImage {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.heroImage1 {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.heroImageFirst {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Journey Content Styles */
+.journeyContent {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.journeyTitle {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 49px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+  margin: 0 0 1.5rem 0;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.journeyText {
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Star Icons */
+.starIconTopRight {
+  position: absolute;
+  top: 15%;
+  right: 45%;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+  transform: translate(50%, -50%);
+}
+
+.starIconBottomRight {
+  position: absolute;
+  bottom: 15%;
+  right: 20%;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  transform: translate(50%, 50%);
+}
+
+.starIconBottomLeft {
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  transform: translate(-50%, 50%);
+}
+
+/* Gradient Content Styles */
+.gradientContent {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.gradientTitle {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.madeFrom {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 28.11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.boldText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28.11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.lightText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 28.11px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.naturalOrganic {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22.82px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+/* Gradient Box Star Icons */
+.gradientStarTop {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.gradientStarBottom {
+  position: absolute;
+  bottom: 10%;
+  left: 60%;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  transform: translate(-50%, 50%);
+}
+
+/* Rotating Circle */
+.rotatingCircle {
+  position: absolute;
+  bottom: 30%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  animation: rotate 20s linear infinite;
+  transform: translate(50%, 50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+/* For screens larger than 1024px - default size */
+@media (min-width: 1025px) {
+  .rotatingCircle {
+    width: 350px;
+    height: 350px;
+    bottom: 50%;
+    right: 15%;
+  }
+  .starIconTopRight {
+    width: 70px;
+    height: 70px;
+    top: 25%;
+    right: 10%;
+  }
+  .starIconBottomRight {
+    width: 40px;
+    height: 40px;
+    bottom: 15%;
+    right: 20%;
+  }
+  .starIconBottomLeft {
+    width: 40px;
+    height: 40px;
+    bottom: 5%;
+    left: 15%;
+  }
+}
+
+/* For 1024px */
+@media (max-width: 1024px) {
+  .heroImageFirst {
+    width: 100%;
+  }
+
+  .rotatingCircle {
+    width: 250px;
+    height: 250px;
+    bottom: 50%;
+    right: 15%;
+  }
+  .starIconTopRight {
+    width: 70px;
+    height: 70px;
+    top: 25%;
+    right: 5%;
+  }
+  .starIconBottomRight {
+    width: 40px;
+    height: 40px;
+    bottom: 15%;
+    right: 20%;
+  }
+  .starIconBottomLeft {
+    width: 40px;
+    height: 40px;
+    bottom: 5%;
+    left: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBox {
+    min-height: 250px;
+  }
+
+  .heroImageFirst {
+    width: 100%;
+  }
+
+  .journeyTitle {
+    font-size: 36px;
+  }
+
+  .journeyContent {
+    padding: 1.5rem;
+  }
+
+  .gradientContent {
+    padding: 1.5rem;
+  }
+
+  .gradientStarTop,
+  .gradientStarBottom {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rotatingCircle {
+    width: 200px;
+    height: 200px;
+    bottom: 30%;
+    right: 10%;
+  }
+
+  .madeFrom,
+  .boldText,
+  .lightText {
+    font-size: 22px;
+  }
+
+  .naturalOrganic {
+    font-size: 18px;
+  }
+
+  .starIconTopRight {
+    width: 45px;
+    height: 45px;
+    top: 15%;
+    right: 5%;
+  }
+  .starIconBottomRight {
+    width: 60px;
+    height: 60px;
+    bottom: 15%;
+    right: 20%;
+  }
+  .starIconBottomLeft {
+    width: 60px;
+    height: 60px;
+    bottom: 5%;
+    left: 15%;
+  }
+
+  .starIconBottomRight,
+  .starIconBottomLeft {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* For 576px and below */
+@media (max-width: 576px) {
+  .heroImageFirst {
+    width: 100%;
+  }
+
+  .rotatingCircle {
+    width: 240px;
+    height: 240px;
+    bottom: 30%;
+    right: 10%;
+  }
+  .starIconTopRight {
+    width: 45px;
+    height: 45px;
+    top: 15%;
+    right: 5%;
+  }
+  .starIconBottomRight {
+    width: 60px;
+    height: 60px;
+    bottom: 15%;
+    right: 20%;
+  }
+  .starIconBottomLeft {
+    width: 60px;
+    height: 60px;
+    bottom: 5%;
+    left: 15%;
+  }
+}
+
+/* For 425px */
+@media (max-width: 425px) {
+  .heroImageFirst {
+    width: 100%;
+  }
+
+  .rotatingCircle {
+    width: 200px;
+    height: 200px;
+    bottom: 30%;
+    right: 10%;
+  }
+  .starIconTopRight {
+    width: 45px;
+    height: 45px;
+    top: 15%;
+    right: 5%;
+  }
+  .starIconBottomRight {
+    width: 60px;
+    height: 60px;
+    bottom: 15%;
+    right: 20%;
+  }
+  .starIconBottomLeft {
+    width: 60px;
+    height: 60px;
+    bottom: 5%;
+    left: 15%;
+  }
+}
+
+/* For 320px */
+@media (max-width: 320px) {
+  .heroImageFirst {
+    width: 100%;
+  }
+
+  .rotatingCircle {
+    width: 160px;
+    height: 160px;
+    bottom: 30%;
+    right: 10%;
+  }
+  .starIconTopRight {
+    width: 45px;
+    height: 45px;
+    top: 15%;
+    right: 15%;
+  }
+  .starIconBottomRight {
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    right: 20%;
+  }
+  .starIconBottomLeft {
+    width: 80px;
+    height: 80px;
+    bottom: 5%;
+    left: 15%;
+  }
+}
+
+/* For screens smaller than 320px */
+@media (max-width: 319px) {
+  .heroImageFirst {
+    width: 100%;
+  }
+
+  .rotatingCircle {
+    width: 120px;
+    height: 120px;
+    bottom: 30%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroBox {
+    min-height: 200px;
+  }
+
+  .journeyTitle {
+    font-size: 28px;
+  }
+
+  .journeyText {
+    font-size: 11px;
+  }
+
+  .journeyContent {
+    padding: 1rem;
+  }
+
+  .gradientContent {
+    padding: 1rem;
+  }
+
+  .gradientStarTop,
+  .gradientStarBottom {
+    width: 16px;
+    height: 16px;
+  }
+
+  .madeFrom,
+  .boldText,
+  .lightText {
+    font-size: 18px;
+  }
+
+  .naturalOrganic {
+    font-size: 16px;
+  }
+
+  .starIconTopRight {
+    width: 35px;
+    height: 35px;
+  }
+
+  .starIconBottomRight,
+  .starIconBottomLeft {
+    width: 16px;
+    height: 16px;
+  }
+}

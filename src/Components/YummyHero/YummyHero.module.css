@@ -1,0 +1,561 @@
+.yummyHeroSection {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #f9cea06b;
+  overflow-x: hidden;
+}
+
+.row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+  margin: 0;
+}
+
+.yummyHeroSection :global(.container-fluid) {
+  overflow-x: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Grid Container for 4 Boxes */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: 100%;
+  min-height: 600px;
+}
+
+/* Responsive: Single column for small screens */
+@media (max-width: 991px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    min-height: auto;
+  }
+}
+
+.gridBox {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.detailsBox {
+  overflow: hidden;
+}
+
+.gridImage {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Presentation Box Styles */
+.presentationBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.clickText {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.presentationImage {
+  width: 60%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin: 1rem 0;
+}
+
+.presentationTitle {
+  font-family: "Figtree", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  color: #000;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Star Icons for Presentation Box */
+.presentationStarTop {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.presentationStarBottom {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+  transform: translate(50%, 50%);
+}
+
+/* Star Icons for Text Content Box */
+.textContentStarTop {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+  transform: translate(50%, -50%);
+}
+
+.textContentStarBottom {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 26px;
+  height: 26px;
+  z-index: 2;
+  transform: translate(-50%, 50%);
+}
+
+/* Details Box Styles */
+.detailsContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.detailsText {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  margin: 0 0 1rem 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.plusIcon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  margin-left: 0;
+}
+
+/* Rotating Circle for Details Box */
+.detailsRotatingCircle {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  animation: rotate 20s linear infinite;
+  transform: translate(50%, 50%);
+}
+
+/* Responsive adjustments for rotating circle */
+@media (max-width: 1024px) {
+  .detailsRotatingCircle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Text Content Box */
+.textContent {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 105, 220, 0.22) 0%,
+    rgba(245, 109, 0, 0.22) 100%
+  );
+}
+
+.gradientTitle {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.madeFrom {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.boldText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.lightText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+.naturalOrganic {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #333;
+}
+
+/* Right Side - Rotating Image */
+.rotatingImageContainer {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.rotatingImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.yummyTitle {
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background: linear-gradient(
+    90deg,
+    #f69138 -751.47%,
+    #f08e49 -648.41%,
+    #e28777 -451.66%,
+    #d07eb3 -226.81%,
+    #d177a8 -198.7%,
+    #dc5370 -67.53%,
+    #e33948 44.89%,
+    #e82930 129.21%,
+    #ea2427 185.43%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .clickText {
+    font-size: 22px;
+  }
+
+  .presentationTitle {
+    font-size: 24px;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridBox {
+    min-height: 200px;
+  }
+
+  .rotatingImageContainer {
+    min-height: 400px;
+  }
+
+  .rotatingImage {
+    max-width: 300px;
+  }
+
+  .yummyTitle {
+    font-size: 36px;
+  }
+
+  .madeFrom,
+  .boldText,
+  .lightText {
+    font-size: 22px;
+  }
+
+  .naturalOrganic {
+    font-size: 18px;
+  }
+
+  .textContent {
+    padding: 1.5rem;
+  }
+
+  .clickText {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .presentationImage {
+    max-width: 100px;
+  }
+
+  .presentationTitle {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .presentationStarTop,
+  .presentationStarBottom {
+    width: 20px;
+    height: 20px;
+  }
+
+  .textContentStarTop,
+  .textContentStarBottom {
+    width: 20px;
+    height: 20px;
+  }
+
+  .detailsText {
+    font-size: 18px;
+  }
+
+  .plusIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .detailsRotatingCircle {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .yummyHeroSection {
+    padding: 2rem 1rem;
+  }
+
+  .gridContainer {
+    gap: 0.5rem;
+  }
+
+  .gridBox {
+    min-height: 180px;
+  }
+
+  .rotatingImageContainer {
+    min-height: 300px;
+  }
+
+  .rotatingImage {
+    max-width: 250px;
+  }
+
+  .yummyTitle {
+    font-size: 28px;
+  }
+
+  .madeFrom,
+  .boldText,
+  .lightText {
+    font-size: 18px;
+  }
+
+  .naturalOrganic {
+    font-size: 16px;
+  }
+
+  .textContent {
+    padding: 1rem;
+  }
+
+  .clickText {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .presentationImage {
+    max-width: 80px;
+  }
+
+  .presentationTitle {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .presentationStarTop,
+  .presentationStarBottom {
+    width: 16px;
+    height: 16px;
+  }
+
+  .textContentStarTop,
+  .textContentStarBottom {
+    width: 16px;
+    height: 16px;
+  }
+
+  .detailsText {
+    font-size: 16px;
+  }
+
+  .plusIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .detailsRotatingCircle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 425px) {
+  .clickText {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .presentationImage {
+    max-width: 70px;
+  }
+
+  .presentationTitle {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .presentationStarTop,
+  .presentationStarBottom {
+    width: 14px;
+    height: 14px;
+  }
+
+  .textContentStarTop,
+  .textContentStarBottom {
+    width: 14px;
+    height: 14px;
+  }
+
+  .detailsText {
+    font-size: 14px;
+  }
+
+  .plusIcon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .detailsRotatingCircle {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 320px) {
+  .clickText {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .presentationImage {
+    max-width: 60px;
+  }
+
+  .presentationTitle {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .presentationStarTop,
+  .presentationStarBottom {
+    width: 12px;
+    height: 12px;
+  }
+
+  .textContentStarTop,
+  .textContentStarBottom {
+    width: 12px;
+    height: 12px;
+  }
+
+  .detailsText {
+    font-size: 14px;
+  }
+
+  .plusIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .detailsRotatingCircle {
+    width: 120px;
+    height: 120px;
+  }
+}
